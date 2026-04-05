@@ -7,13 +7,13 @@ If your plugin does not need CSS, delete this file.
 
 */
 
-.container{
+.container {
 	width: 100%;
 	max-width: 45rem;
 	margin: 0 auto;
 }
 
-.chat-view{
+.chat-view {
 	width: 100%;
 	height: 100%;
 	position: relative;
@@ -22,17 +22,17 @@ If your plugin does not need CSS, delete this file.
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
-	gap: 1rem;
+	gap: 1.2rem;
 }
 
-.chat-input{
+.chat-input {
 	width: 100%;
 	resize: vertical;
 	min-height: 6rem;
 	font-size: 1rem;
 }
 
-.chat-footer{
+.chat-footer {
 	position: fixed;
 	background-color: var(--background-primary);
 	padding: 1rem;
@@ -41,13 +41,17 @@ If your plugin does not need CSS, delete this file.
 	left: 0;
 	right: 0;
 	width: 100%;
+	box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.chat-footer .container {
 	display: flex;
 	flex-direction: column;
 	align-items: end;
 	gap: 1rem;
 }
 
-.primary-action-button{
+.primary-action-button {
 	padding: 1.5rem 2rem;
 	font-weight: 600;
 }
@@ -56,13 +60,77 @@ If your plugin does not need CSS, delete this file.
 	user-select: text !important;
 }
 
-.chat-message{
+.chat-message {
 	padding: 0rem 1rem;
 	border-radius: 0.5rem;
 	border: 1px solid var(--background-modifier-border);
 	transition: all 150ms;
+	position: relative;
+	scroll-margin-top: 2rem;
 }
 
-.chat-message:hover{
+.chat-message:hover {
 	background-color: var(--background-primary-alt);
+}
+
+.chat-message-role {
+	position: absolute;
+	top: 0;
+	left: 0.66rem;
+	transform: translateY(-50%);
+	font-size: 0.75rem;
+	padding: 0 0.33rem;
+	background-color: var(--background-primary);
+	color: var(--text-muted);
+	border-radius: 4px;
+	border: 1px solid transparent;
+	transition: all 150ms;
+}
+
+.chat-message:hover .chat-message-role, .chat-message:hover .chat-message-action-list {
+	background-color: var(--background-primary-alt);
+	border-color: var(--background-modifier-border);
+}
+
+.chat-message-action-list {
+	position: absolute;
+	top: 0;
+	right: 0.66rem;
+	transform: translateY(-50%);
+	display: flex;
+	gap: .5rem;
+	padding: 0.33rem;
+	background-color: var(--background-primary);
+	color: var(--text-muted);
+	border-radius: 8px;
+	border: 1px solid transparent;
+}
+
+.chat-message-action-list button{
+	padding: 0rem 1rem;
+	font-size: 0.75rem;
+	height: 1.33rem;
+}
+
+.chat-message-editor {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.chat-message-edit-area{
+	width: 100%;
+	height: 12rem;
+	font-size: 1rem;
+}
+
+.chat-message-editor-footer{
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.spacer{
+	flex: 1;
 }
