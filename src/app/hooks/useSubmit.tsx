@@ -38,6 +38,7 @@ const useSubmit = () => {
 				]
 			}
 
+			// Create response message
 			let responseMessage = {
 				id: v4(),
 				role: "model",

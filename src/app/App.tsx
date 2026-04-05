@@ -30,7 +30,7 @@ const App = () => {
 
 			{chat?.messages.map((item, index) => (
 				<div key={index} className="chat-message">
-					<MarkdownBlock text={item.content}/>
+					<MarkdownBlock text={item.content || "..."}/>
 				</div>
 			))}
 			<div className="chat-footer">
