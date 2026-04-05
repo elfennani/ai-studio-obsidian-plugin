@@ -1,0 +1,11 @@
+{
+	"id": "ai-studio",
+	"name": "AI Studio",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Provide a way to interact with AI without leaving Obsidian",
+	"author": "Nizar Elfennani",
+	"authorUrl": "https://github.com/elfennani",
+	"fundingUrl": null,
+	"isDesktopOnly": false
+}
